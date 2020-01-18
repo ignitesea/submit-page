@@ -1,0 +1,96 @@
+@import url(https://fonts.googleapis.com/css?family=Merriweather%3A400%2C700%2C900%2C400italic%2C700italic%2C900italic%7CMontserrat%3A400%2C700%7CInconsolata%3A400&#038;subset=latin%2Clatin-ext);
+html, body {
+  font-size: 14px;
+}
+
+.c-forms-form-body {
+  border: 1px solid #ddd;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
+          box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
+  border-radius: 3px;
+  padding: 2.5rem;
+}
+
+body {
+  background-color: #eee;
+}
+
+.c-page-page1 .c-field + .c-field .c-editor.c-html {
+  padding: 1.5rem 2em 2rem;
+  margin-left: 2rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: absolute !important;
+  border: 2px solid #faf0b7;
+  background-color: #fefbec;
+  font-family: Merriweather, Georgia, serif !important;
+  font-size: 1rem !important;
+  -webkit-transition: opacity 250ms;
+  transition: opacity 250ms;
+  opacity: 0;
+}
+
+.c-page-page1 .c-field:focus-within + .c-field .c-editor.c-html {
+  opacity: 1;
+}
+
+.cognito .c-field[data-field="Pitch"] .c-editor textarea {
+  height: 200px;
+}
+
+.c-forms-form-title {
+  padding-top: 0 !important;
+  padding-bottom: 1rem !important;
+}
+
+.c-forms-form-title h2 {
+  font-family: Montserrat, "Helvetica Neue", sans-serif !important;
+  font-size: 2.0625rem !important;
+}
+
+.c-forms-form-title .c-forms-description {
+  font-family: Merriweather, Georgia, serif !important;
+  font-size: 1rem !important;
+}
+
+.c-forms-progress {
+  padding-bottom: 1rem !important;
+}
+
+.c-forms-progress li a {
+  font-family: Montserrat, "Helvetica Neue", sans-serif !important;
+  font-size: 1rem !important;
+}
+
+.c-forms-progress li a span {
+  color: #1a1a1a !important;
+}
+
+.c-forms-progress li:not(.c-page-selected) a:before {
+  background-color: #eee !important;
+  color: #aaa !important;
+}
+
+.c-forms-progress li:not(.c-page-selected) a span {
+  color: #aaa !important;
+}
+
+.cognito .c-label {
+  font-family: Montserrat, "Helvetica Neue", sans-serif !important;
+  font-size: 1rem !important;
+}
+
+textarea, input {
+  font-family: Merriweather, Georgia, serif !important;
+  font-size: 1rem !important;
+}
+
+.c-action button {
+  font-family: Montserrat, "Helvetica Neue", sans-serif !important;
+  font-size: 1rem !important;
+}
+
+p, input, textarea, h1, h2, h3, .c-label, .c-forms-description {
+  color: #1a1a1a !important;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,91 @@
+@import url(https://fonts.googleapis.com/css?family=Merriweather%3A400%2C700%2C900%2C400italic%2C700italic%2C900italic%7CMontserrat%3A400%2C700%7CInconsolata%3A400&#038;subset=latin%2Clatin-ext)
+
+$cGrayDark: #ddd
+$cGrayLight: #eee
+$cGrayVeryDark: #aaa
+$cBlack: #1a1a1a
+$cBrand: #d00f16
+$cHighlight: #fefbec
+$cHighlightBorder: #faf0b7
+$cLink: #007acc
+
+$fontHead: Montserrat, "Helvetica Neue", sans-serif
+$fontBody: Merriweather, Georgia, serif
+
+$sHead: 2.0625rem
+$sBody: 1rem
+
+html, body
+  font-size: 14px
+
+// Add padding, rounding, and shadow to the form, and make the page background gray
+.c-forms-form-body
+  border: 1px solid $cGrayDark
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px
+  border-radius: 3px
+  padding: 2.5rem
+body
+  background-color: $cGrayLight
+
+// Only show tooltips when the fields they apply to are focused
+.c-page-page1 .c-field
+  & + .c-field .c-editor.c-html
+    padding: 1.5rem 2em 2rem
+    margin-left: 2rem
+    box-sizing: border-box
+    position: absolute !important
+    border: 2px solid $cHighlightBorder
+    background-color: $cHighlight
+    font-family: $fontBody !important
+    font-size: 1rem !important
+    transition: opacity 250ms
+    opacity: 0
+  &:focus-within
+    & + .c-field .c-editor.c-html
+      opacity: 1
+
+// Make the pitch field bigger (not possible to do in the editor)
+.cognito .c-field[data-field="Pitch"] .c-editor textarea
+  height: 200px
+
+// Fix title
+.c-forms-form-title
+  padding-top: 0 !important
+  padding-bottom: 1rem !important
+  h2
+    font-family: $fontHead !important
+    font-size: $sHead !important
+  .c-forms-description
+    font-family: $fontBody !important
+    font-size: $sBody !important
+
+// Fix progress bar
+.c-forms-progress
+  padding-bottom: 1rem !important
+  li
+    a
+      font-family: $fontHead !important
+      font-size: $sBody !important
+      span
+        color: $cBlack !important
+    &:not(.c-page-selected) a
+      &:before
+        background-color: $cGrayLight !important
+        color: $cGrayVeryDark !important
+      span
+        color: $cGrayVeryDark !important
+
+// Fix misc fonts
+.cognito .c-label
+  font-family: $fontHead !important
+  font-size: $sBody !important
+textarea, input
+  font-family: $fontBody !important
+  font-size: $sBody !important
+.c-action button
+  font-family: $fontHead !important
+  font-size: $sBody !important
+
+// Fix misc colors
+p, input, textarea, h1, h2, h3, .c-label, .c-forms-description
+  color: $cBlack !important
