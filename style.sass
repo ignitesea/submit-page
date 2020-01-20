@@ -17,6 +17,9 @@ $sHead: 2.0625rem
 $sBody: 1rem
 $sMaxWidth: 1070px
 
+$qDesktop: "only screen and (min-width : 500px)";
+$qMobile: "only screen and (max-width : 499px)";
+
 html, body
   font-size: 16px
 html
@@ -46,11 +49,9 @@ header
       background-position: 50% 50%
       background-repeat: no-repeat
   nav
-    float: right
-    margin: 60px 0
+    margin-top: 0
     li
-      display: block
-      float: right
+      display: inline-block
       list-style-type: none
       a
         color: $cBlack
@@ -60,6 +61,21 @@ header
         padding: .65625em .875em
         &:hover
           color: $cLink
+
+@media #{$qDesktop}
+  header nav
+    margin: 60px 0
+    &, & li
+    float: right
+@media #{$qMobile}
+  header
+    text-align: center
+    h1
+      margin-bottom: 0
+    nav ul
+      padding-left: 0
+      margin-bottom: 3rem
+
 
 // Intro
 .intro
@@ -95,21 +111,25 @@ p, li
     padding: 0 !important
 
 // Only show tooltips when the fields they apply to are focused
+@media #{$qDesktop}
+  .c-page-page1 .c-field
+    & + .c-field .c-editor.c-html
+      margin-left: 2rem
+      position: absolute !important
+      transition: opacity 250ms
+      opacity: 0
+    &:focus-within
+      & + .c-field .c-editor.c-html
+        opacity: 1
+
 .c-page-page1 .c-field
   & + .c-field .c-editor.c-html
     padding: 1.5rem 2em 2rem
-    margin-left: 2rem
     box-sizing: border-box
-    position: absolute !important
     border: 2px solid $cHighlightBorder
     background-color: $cHighlight
     font-family: $fontBody !important
     font-size: 1rem !important
-    transition: opacity 250ms
-    opacity: 0
-  &:focus-within
-    & + .c-field .c-editor.c-html
-      opacity: 1
 
 // Make the pitch field bigger (not possible to do in the editor)
 .cognito .c-field[data-field="Pitch"] .c-editor textarea

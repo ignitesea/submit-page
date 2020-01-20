@@ -36,13 +36,11 @@ header h1 a {
 }
 
 header nav {
-  float: right;
-  margin: 60px 0;
+  margin-top: 0;
 }
 
 header nav li {
-  display: block;
-  float: right;
+  display: inline-block;
   list-style-type: none;
 }
 
@@ -56,6 +54,26 @@ header nav li a {
 
 header nav li a:hover {
   color: #007acc;
+}
+
+@media only screen and (min-width: 500px) {
+  header nav {
+    margin: 60px 0;
+    float: right;
+  }
+}
+
+@media only screen and (max-width: 499px) {
+  header {
+    text-align: center;
+  }
+  header h1 {
+    margin-bottom: 0;
+  }
+  header nav ul {
+    padding-left: 0;
+    margin-bottom: 3rem;
+  }
 }
 
 .intro h2 {
@@ -99,23 +117,27 @@ p a:hover, li a:hover {
   padding: 0 !important;
 }
 
+@media only screen and (min-width: 500px) {
+  .c-page-page1 .c-field + .c-field .c-editor.c-html {
+    margin-left: 2rem;
+    position: absolute !important;
+    -webkit-transition: opacity 250ms;
+    transition: opacity 250ms;
+    opacity: 0;
+  }
+  .c-page-page1 .c-field:focus-within + .c-field .c-editor.c-html {
+    opacity: 1;
+  }
+}
+
 .c-page-page1 .c-field + .c-field .c-editor.c-html {
   padding: 1.5rem 2em 2rem;
-  margin-left: 2rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  position: absolute !important;
   border: 2px solid #faf0b7;
   background-color: #fefbec;
   font-family: Merriweather, Georgia, serif !important;
   font-size: 1rem !important;
-  -webkit-transition: opacity 250ms;
-  transition: opacity 250ms;
-  opacity: 0;
-}
-
-.c-page-page1 .c-field:focus-within + .c-field .c-editor.c-html {
-  opacity: 1;
 }
 
 .cognito .c-field[data-field="Pitch"] .c-editor textarea {
