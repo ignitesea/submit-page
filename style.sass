@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Merriweather%3A400%2C700%2C900%2C400italic%2C700italic%2C900italic%7CMontserrat%3A400%2C700%7CInconsolata%3A400&#038;subset=latin%2Clatin-ext)
 
+$cGrayVeryDark: #686868
 $cGrayDark: #ddd
 $cGrayLight: #eee
 $cGrayVeryDark: #aaa
@@ -14,18 +15,84 @@ $fontBody: Merriweather, Georgia, serif
 
 $sHead: 2.0625rem
 $sBody: 1rem
+$sMaxWidth: 1070px
 
 html, body
-  font-size: 14px
-
-// Add padding, rounding, and shadow to the form, and make the page background gray
-.c-forms-form-body
-  border: 1px solid $cGrayDark
-  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px
-  border-radius: 3px
-  padding: 2.5rem
+  font-size: 16px
+html
+  background-color: #ccc
 body
-  background-color: $cGrayLight
+  margin: 21px
+  background-color: #fff
+  min-height: 100%
+  padding: 0 3rem
+
+header, .intro, .cognito
+  max-width: $sMaxWidth
+  margin: 0 auto
+
+// Fix the title block
+header
+  h1
+    display: inline-block
+    a
+      text-indent: -1000em
+      overflow: hidden
+      display: block
+      height: 150px
+      width: 150px
+      background-image: url(logo.png)
+      background-size: contain
+      background-position: 50% 50%
+      background-repeat: no-repeat
+  nav
+    float: right
+    margin: 60px 0
+    li
+      display: block
+      float: right
+      list-style-type: none
+      a
+        color: $cBlack
+        font-family: $fontHead
+        font-size: 14px
+        text-decoration: none
+        padding: .65625em .875em
+        &:hover
+          color: $cLink
+
+// Intro
+.intro
+  h2
+    font-family: $fontHead
+    font-size: 2.0625rem
+
+p, li
+  color: $cBlack
+  font-family: $fontBody
+  font-size: $sBody
+  a
+    color: $cLink
+    text-decoration: underline
+    &:hover
+      color: $cGrayVeryDark
+      text-decoration: none
+
+// Add padding, rounding, and shadow to the form
+.cognito
+  padding: 0
+  min-height: 800px
+
+// Fix title
+.c-forms-form-title
+  padding-top: 0 !important
+  padding-bottom: 1rem !important
+  h2
+    display: none
+  .c-forms-description
+    font-family: $fontBody !important
+    font-size: $sBody !important
+    padding: 0 !important
 
 // Only show tooltips when the fields they apply to are focused
 .c-page-page1 .c-field
@@ -48,20 +115,10 @@ body
 .cognito .c-field[data-field="Pitch"] .c-editor textarea
   height: 200px
 
-// Fix title
-.c-forms-form-title
-  padding-top: 0 !important
-  padding-bottom: 1rem !important
-  h2
-    font-family: $fontHead !important
-    font-size: $sHead !important
-  .c-forms-description
-    font-family: $fontBody !important
-    font-size: $sBody !important
-
 // Fix progress bar
 .c-forms-progress
   padding-bottom: 1rem !important
+  padding-top: 0 !important
   li
     a
       font-family: $fontHead !important
