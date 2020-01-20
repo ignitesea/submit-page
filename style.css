@@ -19,6 +19,26 @@ header, .intro, .cognito {
   margin: 0 auto;
 }
 
+p, li, input, textarea, h1, h2, h3, .c-label, .c-forms-description {
+  color: #1a1a1a;
+}
+
+p, li {
+  font-family: Merriweather, Georgia, serif;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+p a, li a {
+  color: #007acc;
+  text-decoration: underline;
+}
+
+p a:hover, li a:hover {
+  color: #aaa;
+  text-decoration: none;
+}
+
 header h1 {
   display: inline-block;
 }
@@ -79,22 +99,6 @@ header nav li a:hover {
 .intro h2 {
   font-family: Montserrat, "Helvetica Neue", sans-serif;
   font-size: 2.0625rem;
-}
-
-p, li {
-  color: #1a1a1a;
-  font-family: Merriweather, Georgia, serif;
-  font-size: 1rem;
-}
-
-p a, li a {
-  color: #007acc;
-  text-decoration: underline;
-}
-
-p a:hover, li a:hover {
-  color: #aaa;
-  text-decoration: none;
 }
 
 .cognito {
@@ -167,6 +171,21 @@ p a:hover, li a:hover {
   color: #aaa !important;
 }
 
+.cognito .c-helptext p {
+  color: #aaa !important;
+  font-size: 0.9rem;
+}
+
+.c-page-previous-page {
+  background-color: #aaa !important;
+  border-color: #aaa !important;
+}
+
+.c-page-next-page, #c-submit-button {
+  background-color: #d00f16 !important;
+  border-color: #d00f16 !important;
+}
+
 .cognito .c-label {
   font-family: Montserrat, "Helvetica Neue", sans-serif !important;
   font-size: 1rem !important;
@@ -180,9 +199,5 @@ textarea, input {
 .c-action button {
   font-family: Montserrat, "Helvetica Neue", sans-serif !important;
   font-size: 1rem !important;
-}
-
-p, input, textarea, h1, h2, h3, .c-label, .c-forms-description {
-  color: #1a1a1a !important;
 }
 /*# sourceMappingURL=style.css.map */

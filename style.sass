@@ -34,6 +34,23 @@ header, .intro, .cognito
   max-width: $sMaxWidth
   margin: 0 auto
 
+// Fix misc colors
+p, li, input, textarea, h1, h2, h3, .c-label, .c-forms-description
+  color: $cBlack
+
+// Fonts
+p, li
+  font-family: $fontBody
+  font-size: $sBody
+  line-height: 1.75
+  a
+    color: $cLink
+    text-decoration: underline
+    &:hover
+      color: $cGrayVeryDark
+      text-decoration: none
+
+
 // Fix the title block
 header
   h1
@@ -82,17 +99,6 @@ header
   h2
     font-family: $fontHead
     font-size: 2.0625rem
-
-p, li
-  color: $cBlack
-  font-family: $fontBody
-  font-size: $sBody
-  a
-    color: $cLink
-    text-decoration: underline
-    &:hover
-      color: $cGrayVeryDark
-      text-decoration: none
 
 // Add padding, rounding, and shadow to the form
 .cognito
@@ -152,6 +158,18 @@ p, li
       span
         color: $cGrayVeryDark !important
 
+.cognito .c-helptext p
+  color: $cGrayVeryDark !important
+  font-size: 0.9rem
+
+.c-page-previous-page
+  background-color: $cGrayVeryDark !important
+  border-color: $cGrayVeryDark !important
+
+.c-page-next-page, #c-submit-button
+  background-color: $cBrand !important
+  border-color: $cBrand !important
+
 // Fix misc fonts
 .cognito .c-label
   font-family: $fontHead !important
@@ -162,7 +180,3 @@ textarea, input
 .c-action button
   font-family: $fontHead !important
   font-size: $sBody !important
-
-// Fix misc colors
-p, input, textarea, h1, h2, h3, .c-label, .c-forms-description
-  color: $cBlack !important
